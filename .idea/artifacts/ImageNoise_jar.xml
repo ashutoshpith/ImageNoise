@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ImageNoise:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ImageNoise_jar</output-path>
+    <root id="archive" name="ImageNoise.jar">
+      <element id="module-output" name="ImageNoise" />
+    </root>
+  </artifact>
+</component>

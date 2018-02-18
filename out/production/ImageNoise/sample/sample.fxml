@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.effect.DisplacementMap?>
+<?import javafx.scene.effect.FloatMap?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="785.0" prefWidth="1194.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ImageView fx:id="imageView" fitHeight="785.0" fitWidth="1194.0" layoutX="-10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Slider layoutX="894.0" layoutY="31.0" majorTickUnit="20.0" min="-30.0" onMouseClicked="#slide" orientation="VERTICAL" prefHeight="785.0" prefWidth="71.0" showTickLabels="true" showTickMarks="true" style="-fx-background-color: #9b59b6;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+      </Slider>
+      <MenuBar layoutY="-2.0" prefHeight="32.0" prefWidth="125.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openImageSelection" text="Open Image" />
+                  <Menu mnemonicParsing="false" text="Save" />
+                  <Menu mnemonicParsing="false" onAction="#fadein" text="Fade">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Fade in-out" />
+                    </items>
+                  </Menu>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Exit">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#exit" text="Exit" />
+            </items>
+          </Menu>
+        </menus>
+         <opaqueInsets>
+            <Insets right="10.0" />
+         </opaqueInsets>
+      </MenuBar>
+   </children>
+</AnchorPane>
